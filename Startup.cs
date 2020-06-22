@@ -11,9 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using ragaio2.Hubs;
+using Ragaio2.Hubs;
 
-namespace ragaio2
+namespace Ragaio2
 {
     public class Startup
     {
@@ -43,7 +43,7 @@ namespace ragaio2
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapHub<TestHub>("/ragaiodev");
+                endpoints.MapHub<ClientHub>("/ragaiodev");
             });
         }
     }
